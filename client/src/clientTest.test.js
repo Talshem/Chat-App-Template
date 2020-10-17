@@ -1,6 +1,7 @@
 const puppeteer = require("puppeteer");
 const nock = require("nock");
 const useNock = require("nock-puppeteer");
+const { get } = require("../../server/app");
 
 let mockMessages;
 let page1, page2;

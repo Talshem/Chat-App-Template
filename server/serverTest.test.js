@@ -8,7 +8,7 @@ describe('Server Tests', () => {
       user: 'Roy'
     };
     const firstRes = await request(app).get('/messages').expect(200);
-    await request(app).post('/messages').send(data).expect(200);
+    await request(app).post('/messages').send(data).expect(200)
     const secondRes = await request(app).get('/messages').expect(200);
     expect(firstRes.body.length).toBe(secondRes.body.length - 1);
     expect(secondRes.body[secondRes.body.length - 1]).toEqual(data);
